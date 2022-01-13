@@ -48,7 +48,7 @@ function addIntoCart(course ) {
     row.innerHTML = `
       <ul>
            <li>
-                <img src="${course.Image}">
+                <img src="${course.Image}" width=100>
            </li>
            <li>${course.title}</li>
            <li>${course.price}</li>
