@@ -1,0 +1,247 @@
+#online__courses {
+    background: #fdf4f4;
+    height: 1740px;
+}
+
+.online__courses--content h1 {
+    margin-left: 400px;
+    color: #555;
+    padding-top: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    line-height: 1em;
+}
+
+/* main-cart */
+.main__cart {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 70px;
+}
+
+.card-cart {
+    width: 350px;
+    height: 480px;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.10);
+    margin-top: 40px;
+}
+
+/* .add__cart--dorlla h3 {
+   position: relative;
+   left: 200px;
+} */
+
+
+
+/* cooking--course */
+.cooking--course p {
+   position: relative;
+   top: 10px;
+}
+.cooking--course span img {
+    position: relative;
+    top: 10px;
+}
+.cooking--course .add__cart--dorlla {
+    position: relative;
+    top: 17px;
+}
+.cooking--course .btn-cart {
+    position: relative;
+    top: 23px;
+}
+
+
+/* Guiltar__for--beginner */
+.Guiltar__for--beginner .btn-cart {
+    position: relative;
+    top: 26px;
+}
+.Guiltar__for--beginner span img {
+    position: relative;
+    top: 8px;
+}
+.Guiltar__for--beginner .add__cart--dorlla {
+    position: relative;
+    top: 12px;
+}
+
+/* Orchard__at--home */
+.Orchard__at--home .btn-cart {
+    position: relative;
+    top: 25px;
+}
+.Orchard__at--home span img {
+    position: relative;
+    top: 14px;
+}
+.Orchard__at--home .add__cart--dorlla {
+    position: relative;
+    top: 22px;
+}
+
+
+/* recycled--products */
+.recycled--products h1 span {
+  position: relative;
+  left: 210px;
+  top: -23px;
+}
+.recycled--products p {
+   position: relative;
+   top: -20px;
+}
+
+/* web__design--for--beginner */
+.web__design--for--beginner .btn-cart {
+    position: relative;
+    top: 23px;
+}
+.web__design--for--beginner span img {
+    position: relative;
+    top: 14px;
+}
+.web__design--for--beginner .add__cart--dorlla {
+    position: relative;
+    top: 20px;
+}
+
+/* maxican--food */
+.maxican--food .btn-cart {
+    position: relative;
+    top: 20px;
+}
+.maxican--food span img {
+    position: relative;
+    top: 15px;
+}
+.maxican--food .add__cart--dorlla {
+    position: relative;
+    top: 20px;
+}
+
+/* build__music--studio */
+.build__music--studio .btn-cart {
+    position: relative;
+    top: 23px;
+}
+.build__music--studio span img {
+    position: relative;
+    top: 17px;
+}
+.build__music--studio .add__cart--dorlla {
+    position: relative;
+    top: 20px;
+}
+
+
+
+
+.card-cart .add__menu--cart img {
+    width: 350px;
+    height: 220px;
+}
+.card-cart  h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    width: 280px;
+   margin: 0 20px;
+   padding-top: 20px;
+}
+.card-cart p {
+    margin: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    color: #555;
+}
+
+.card-cart  span {
+    margin: 2px 20px;
+    width: 30px;
+}
+
+.card-cart .add__cart--dorlla {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+}
+
+.card-cart .add__cart--dorlla h2 del {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: 20px;
+    margin-left: 22px;
+}
+
+.card-cart .add__cart--dorlla h3 span {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* btn-cart */
+button {
+    /* position: relative;
+    left: 20px;
+    top: 47px; */
+    width: 300px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #00ccff;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: oblique;
+    color: #ffffff;
+    transition: 1.0s ease-in;
+    transition-property: background;
+}
+
+.btn {
+    position: relative;
+    left: 30px;
+}
+
+
+
+button:hover {
+    box-shadow: 0 0 5px #49585c inset;
+    /* background: #49585c; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+#footer {
+    height: 320px;
+    background: #fdf4f4;
+    /* border-top: 2px solid #555; */
+  
+}
+
+.main__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.main__footer .footer-menu p{
+   padding: 9px 0;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 25px;
+}
+
+.main__footer .footer-menu a {
+    text-decoration: none;
+    color: #00ccff;
+    transition: all 0.5 ease-in;
+    transition-property: background;
+}
+
+.main__footer .footer-menu a:hover {
+    color: #519eb1;
+}
+
+
+.main__footer .secondary__footer {
+    margin-right: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

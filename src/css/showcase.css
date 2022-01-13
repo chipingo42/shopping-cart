@@ -1,0 +1,69 @@
+
+/* showcase */
+.showcase-img {
+    background: url('../img/hero.jpg')no-repeat center center/cover;
+    height: 60vh;
+}
+
+.content-showcase {
+    position: absolute;
+    top: 140px;
+}
+
+.content-showcase h1 {
+    z-index: 22;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: lighter;
+    padding-left: 7px;
+}
+
+.content-showcase p {
+   color: #ffff;
+   padding-top: 18px; 
+   font-size: 15px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-weight: 200;
+   font-style: normal;
+   padding-left: 7px;
+
+}
+
+
+/* btn */
+.btn {
+    position: relative;
+    top: 30px;
+    left: 7px;
+}
+.btn input {
+    width: 390px;
+    height: 35px;
+    border: none;
+    padding-left: 5px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.btn input:focus {
+    outline: none;
+}
+
+.btn input::placeholder {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.btn button {
+    position: relative;
+    left: -174px;
+    top: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 22;
+}
