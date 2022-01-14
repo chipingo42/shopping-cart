@@ -1,13 +1,21 @@
 // Variables
 var courses = document.querySelector('#online__courses'),
-    shoppingCartContent = document.querySelector('#pull-up-id')
+    shoppingCartContent = document.querySelector('#pull-up-id'),
+    clearCartBtn = document.querySelector('#clear-btn');
 
 
 // Listeners
 loadEventListener();
 
 function loadEventListener() {
+    // when a new course is added
     courses.addEventListener('click', buyCourse);
+
+    // when rhe remove button is clicked
+    shoppingCartContent.addEventListener('click', removerCourse);
+
+    // clear cart Btn
+    clearCartBtn.addEventListener('click', clearcart)
 }
 
 
@@ -27,33 +35,36 @@ function buyCourse(e) {
     }
 }
 
+
 // read the HTML information of the selected course
 function getCoureInfo(course) {
     // create an object with course data
     var courseInfo = {
-        Image: course.querySelector('img').src,
+        Image: course.querySelector('.add__menu--cart img').src,
         title: course.querySelector('h1').textContent,
-        price: course.querySelector(['h2','h3']).textContent,
-        id: course.querySelector('button').getAttribute('btn-id')
+        price: course.querySelector('.add__cart--dorlla span').textContent,
+        id: course.querySelector('h1 a').getAttribute('data-id')
     }
     // Insert into the shooping cart
     addIntoCart(courseInfo);
 }
+
+
 // Display the selected course into the shoopin cart
 function addIntoCart(course ) {
     //    create a <ul>
-    var row = document.createElement('ul');
+    var row = document.createElement('cart__content');
 
     // Build the template
     row.innerHTML = `
       <ul>
            <li>
-                <img src="${course.Image}" width=100>
+                <img src="${course.Image}" width=130>
            </li>
            <li>${course.title}</li>
            <li>${course.price}</li>
            <li>
-                <a href="#" class="btn__clear" id="clear-btn"${course.price}">X</a>
+                <a href="#" class="remove" data-id="${course.id}">X</a>
            </li>
       </ul>
 
@@ -63,6 +74,23 @@ function addIntoCart(course ) {
     console.log('added')
 }
 
+// remove course from the DOM
+function removerCourse(e) {
+
+    if(e.target.classList.contains('remove')) {
+        e.target.parentElement.parentElement.remove();
+    }
+}
+
+
+// clear course btn 
+function clearcart() {
+    // shoppingCartContent.innerHTML = '';
+
+    while(shoppingCartContent.firstChild) {
+        shoppingCartContent.removeChild(shoppingCartContent.firstChild)
+    }
+}
 
 
 

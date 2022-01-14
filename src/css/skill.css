@@ -11,6 +11,8 @@
 }
 /* new skill */
 .container__skill .new__skill span img {
+    position: relative;
+    left: 10px;
    width: 30px;
    height: 60px;
    position: relative;

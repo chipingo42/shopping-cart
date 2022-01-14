@@ -35,7 +35,11 @@
    left: 200px;
 } */
 
-
+/* html-css-javascript */
+.html-css-javascript .btn {
+    position: relative;
+    top: 2px;
+}
 
 /* cooking--course */
 .cooking--course p {
@@ -96,8 +100,13 @@
    top: -20px;
 }
 
+.recycled--products .btn {
+    position: relative;
+    top: 2px;
+}
+
 /* web__design--for--beginner */
-.web__design--for--beginner .btn-cart {
+.web__design--for--beginner .btn {
     position: relative;
     top: 23px;
 }
@@ -125,7 +134,7 @@
 }
 
 /* build__music--studio */
-.build__music--studio .btn-cart {
+.build__music--studio .btn {
     position: relative;
     top: 23px;
 }
@@ -136,6 +145,12 @@
 .build__music--studio .add__cart--dorlla {
     position: relative;
     top: 20px;
+}
+
+/* harvest */
+.harvest .btn {
+    position: relative;
+    top: 2px;
 }
 
 
@@ -190,10 +205,7 @@
 }
 
 /* btn-cart */
-button {
-    /* position: relative;
-    left: 20px;
-    top: 47px; */
+h1 a {
     width: 300px;
     height: 40px;
     display: inline-block;
@@ -201,6 +213,9 @@ button {
     border: none;
     border-radius: 5px;
     background: #00ccff;
+    text-align: center;
+    padding-top: 7px;
+    text-decoration: none;
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
@@ -211,14 +226,10 @@ button {
     transition-property: background;
 }
 
-.btn {
-    position: relative;
-    left: 30px;
-}
 
 
 
-button:hover {
+h1 a:hover {
     box-shadow: 0 0 5px #49585c inset;
     /* background: #49585c; */
 }
