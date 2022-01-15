@@ -30,10 +30,7 @@
     margin-top: 40px;
 }
 
-/* .add__cart--dorlla h3 {
-   position: relative;
-   left: 200px;
-} */
+
 
 /* html-css-javascript */
 .html-css-javascript .btn {
@@ -45,10 +42,6 @@
 .cooking--course p {
    position: relative;
    top: 10px;
-}
-.cooking--course span img {
-    position: relative;
-    top: 10px;
 }
 .cooking--course .add__cart--dorlla {
     position: relative;
@@ -65,10 +58,6 @@
     position: relative;
     top: 26px;
 }
-.Guiltar__for--beginner span img {
-    position: relative;
-    top: 8px;
-}
 .Guiltar__for--beginner .add__cart--dorlla {
     position: relative;
     top: 12px;
@@ -78,10 +67,6 @@
 .Orchard__at--home .btn-cart {
     position: relative;
     top: 25px;
-}
-.Orchard__at--home span img {
-    position: relative;
-    top: 14px;
 }
 .Orchard__at--home .add__cart--dorlla {
     position: relative;
@@ -110,10 +95,6 @@
     position: relative;
     top: 23px;
 }
-.web__design--for--beginner span img {
-    position: relative;
-    top: 14px;
-}
 .web__design--for--beginner .add__cart--dorlla {
     position: relative;
     top: 20px;
@@ -124,10 +105,6 @@
     position: relative;
     top: 20px;
 }
-.maxican--food span img {
-    position: relative;
-    top: 15px;
-}
 .maxican--food .add__cart--dorlla {
     position: relative;
     top: 20px;
@@ -137,10 +114,6 @@
 .build__music--studio .btn {
     position: relative;
     top: 23px;
-}
-.build__music--studio span img {
-    position: relative;
-    top: 17px;
 }
 .build__music--studio .add__cart--dorlla {
     position: relative;
@@ -178,9 +151,10 @@
     color: #555;
 }
 
-.card-cart  span {
-    margin: 2px 20px;
-    width: 30px;
+.card-cart  span img{
+   position: relative;
+   top: 15px;
+   left: 23px;
 }
 
 .card-cart .add__cart--dorlla {

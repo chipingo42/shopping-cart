@@ -11,7 +11,7 @@ function loadEventListener() {
     // when a new course is added
     courses.addEventListener('click', buyCourse);
 
-    // when rhe remove button is clicked
+    // when the remove button is clicked
     shoppingCartContent.addEventListener('click', removerCourse);
 
     // clear cart Btn
@@ -24,9 +24,11 @@ function loadEventListener() {
 function buyCourse(e) {
     e.preventDefault();
     // console.log(e.target)
+
     // use delegaton to find course that was added
     if(e.target.classList.contains('btn')) {
         // console.log('Added')
+        
         // read the course value
         var course = e.target.parentElement.parentElement;
 
