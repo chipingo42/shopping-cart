@@ -1,7 +1,8 @@
 #skill {
     width: 100%;
     height: 19vh;
-    background: #a5084ab6;
+    /* background: #a5084ab6; */
+    background: linear-gradient(270deg, #ff0458, #a50849e8 );
 }
 
 .container__skill {
@@ -9,6 +10,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 /* new skill */
 .container__skill .new__skill span img {
     position: relative;
@@ -99,6 +101,206 @@
     font-style: normal;
     color: #ffffff;
 }
+
+
+
+@media screen and (max-width: 780px) {
+    #skill {
+        width: 100%;
+        height: 290px;
+    }
+
+
+    .content__skil {
+        margin: 0 40px;
+    }
+
+    .container__skill .new__skill {
+        position: relative;
+        left: -20px;
+    }
+
+    .container__skill .new__skill span img  {
+        position: relative;
+        left: 55px;
+    }
+
+    .container__skill .new__skill h2 {
+        position: relative;
+        left: 94px;
+        width: 150px;
+        font-size: 30px;
+    }
+
+    .container__skill .new__skill p {
+        font-size: 30px;
+    }
+
+
+
+    .container__skill .expert__instrutors--skill h2 {
+       position: relative;
+       left: -20px;
+       font-size: 30px;
+    }
+    .container__skill .expert__instrutors--skill p {
+        width: 170px;
+        font-size: 30px;
+    }
+    .container__skill .expert__instrutors--skill {
+        position: relative;
+        left: 17px;
+    }
+
+    .container__skill .expert__instrutors--skill span img {
+        position: relative;
+        left: -10px;
+    }
+
+
+    /* lifetime */
+    .container__skill .lifetime__access--skill {
+        position: relative;
+        left: 47px;
+    }
+
+    .container__skill .lifetime__access--skill span img  {
+        width: 35px;
+        position: relative;
+       left: -120px;
+       
+    }
+
+    .container__skill .lifetime__access--skill h2 {
+        width: 90px;
+        position: relative;
+        left: -80px;
+        font-size: 30px;
+    }
+   
+    .container__skill .lifetime__access--skill p {
+        width: 90px;
+        font-size: 30px;
+    }
+   
+
+
+    @media screen and (max-width: 500px) {
+        #skill {
+            width: 100%;
+            height: 810px;
+        }
+        .container__skill {
+            position: relative;
+            top: 40px;
+        }
+        .expert__instrutors--skill {
+            margin-left: 30px;
+        }
+
+        .lifetime__access--skill {
+           margin-left: -270px;
+           margin-top: 230px;
+        }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

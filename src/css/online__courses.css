@@ -1,6 +1,8 @@
 #online__courses {
     background: #fdf4f4;
-    height: 1740px;
+    height: 100%;
+    /* margin: 20px 0; */
+
 }
 
 .online__courses--content h1 {
@@ -20,6 +22,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-right: 70px;
+    padding: 60px 0;
+
 }
 
 .card-cart {
@@ -27,9 +31,58 @@
     height: 480px;
     background: #ffffff;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.10);
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    margin: 20px 0;
 }
 
+.card-cart img {
+    width: 350px;
+    height: 220px;
+}
+
+.card-cart .star {
+    position: relative;
+    top: -5px;
+    left: 20px;
+    width: 70px;
+    height: 20px;
+}
+.card-cart del {
+    margin-top: 10px;
+}
+.card-cart span {
+    display: flex;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.card-cart span:last-child {
+    position: relative;
+    left: 220px;
+}
+.card-cart .btn {
+    margin-left: 20px;
+    margin-top: 7px;
+    width: 290px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #00ccff;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: oblique;
+    color: #ffffff;
+    transition: 1.0s ease-in;
+    transition-property: background;
+}
+
+.card-cart .btn:hover {
+    box-shadow: 0px 0px 5px indigo;
+}
 
 
 /* html-css-javascript */
@@ -201,12 +254,96 @@ h1 a {
 }
 
 
-
-
 h1 a:hover {
     box-shadow: 0 0 5px #49585c inset;
     /* background: #49585c; */
 }
+
+
+@media screen and (max-width: 780px) {
+    #online__courses {
+       width: 780px;
+       height: 2900px;
+    }
+
+    .online__courses--content h1 {
+        position: relative;
+        left: -150px;
+        font-size: 50px;
+    }
+
+    .main__cart {
+       position: relative;
+       left: 30px;
+    }
+
+
+    @media screen and (max-width: 500px) {
+        #online__courses {
+            height: 100%;
+        }
+        .online__courses--content h1 {
+            position: relative;
+            left: -350px;
+            font-size: 40px;
+        }
+
+        .main__cart {
+           display: block;
+           position: relative;
+           left: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

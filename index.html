@@ -9,25 +9,12 @@
 </head>
 <body>
     <section>
-        <div id="nav" class="navbar">
+        <div id="nav">
             <div class="container">
-                <div class="nav-content">
-                    <h1 class="logo"><img src="./src/img/logo.jpg" alt="logo"></h1>
-                </div>
-                <!-- shopping submenu -->
-                <div class="shopping-submenu">
-                   <span><img class="shopping__cart-logo" src="./src/img/cart.png" alt=""></span>
-                   <div class="cart__content" id="pull-up-id">
-                        <ul>
-                            <li class="image">Image</li>
-                            <li class="name">Name</li>
-                            <li class="price">Price</li>
-                            <ul>
-                                <li><a href="#" class="remove" data-id="2">X</a></li>
-                            </ul>
-                        </ul>
-                        <div class="button"><a href="#" class="btn__clear" id="clear-btn">Clear Cart</a></div>
-                    </div>
+                <div class="navbar">
+                    <div class="logo-img"><img src="./src/img/logo.jpg" alt="logo"></div>
+
+                    <div class="shopping__logo"><img src="./src/img/cart.png" alt=""></div>
                 </div>
                
             </div>
@@ -36,15 +23,15 @@
 
     <section>
         <div id="showcase" class="showcase">
-            <div class="showcase-img">.</div>
+            <div class="showcase-img"><img src="./src/img/hero.jpg" alt=""></div>
             <div class="container">
                 <div class="content-showcase">
                     <h1>Learn Something Today</h1> 
                     <p>Special offer, any course 515 </p>
-                    <div class="btn">
-                        <input type="text" id="inptu-1" placeholder="What do you want to learn?">
-                        <button type="submit" id="btn-1"><img src="./src/img/mglass.png" alt=""></button>
-                    </div>
+                   <form onsubmit="return handle(event)">
+                        <input type="text" id="inptu" placeholder="What do you want to learn?">
+                        <button type="submit" id="btn"><img src="./src/img/mglass.png" alt=""></button>
+                   </form>
                 </div>
             </div>
         </div>
@@ -80,6 +67,25 @@
         </div>
     </section>
 
+    <!-- shopping submenu -->
+    <div class="menubox">
+        <div class="hoverSubMenu">
+            <div class="shopping-submenu  centerBlock">
+                <ul>
+                    <li class="image">Image</li>
+                    <li class="name">Name</li>
+                    <li class="price">Price</li>
+                
+                </ul>
+                <div id="shoppingCartResult"></div>
+               
+                <button class="btn__clear" id="clear-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+    
+   
+
     <section>
         <div id="online__courses" class="online--courses">
             <div class="container">
@@ -87,131 +93,95 @@
                     <h1>Online Courses</h1>
                 </div>
                 <div class="main__cart">
-                    <div class="card-cart html-css-javascript">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course1.jpg" alt="">
-                        </div>
-                        <h1>HTML5, CSS3, JavaScript for Beginners</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="1">ADD TO CART</a></h1>
-                        <!-- <button class="btn" class="btn-cart" data-id="1" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course1.jpg" alt="">
+                       <div class="info">
+                            <h1>HTML5, CSS3, JavaScript for Beginners</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="1">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart cooking--course">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course2.jpg" alt="">
-                        </div>
-                        <h1>Cooking Course</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="2">ADD TO CART</a></h1>
-                        <!-- <button class="btn" data-id="2" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course2.jpg" alt="">
+                       <div class="info">
+                            <h1>Cooking Cours</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="2">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart Guiltar__for--beginner">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course3.jpg" alt="">
-                        </div>
-                        <h1>Guiltar for Beginners</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="3">ADD TO CART</a></h1>
-                        <!-- <button class="btn" idata-id="3" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course3.jpg" alt="">
+                       <div class="info">
+                            <h1>Guiltar for Beginners</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="3">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart Orchard__at--home">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course4.jpg" alt="">
-                        </div>
-                        <h1>Orchard at home</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="4">ADD TO CART</a></h1>
-                        <!-- <button class="btn" data-id="4" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course4.jpg" alt="">
+                       <div class="info">
+                            <h1>Orchard at home</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="4">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart recycled--products">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course5.jpg" alt="">
-                        </div>
-                        <h1>Home Decor with recycled <span> products</span></h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="5">ADD TO CART</a></h1>
-                        <!-- <button class="btn"data-id="5" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course5.jpg" alt="">
+                       <div class="info">
+                            <h1>Home Decor with recycled products</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="5">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart web__design--for--beginner">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/hero.jpg" alt="">
-                        </div>
-                        <h1>Web Design for Beginners</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="6">ADD TO CART</a></h1>
-                        <!-- <button class="btn"data-id="6" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/hero.jpg" alt="">
+                       <div class="info">
+                            <h1>Web Design for Beginners</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="6">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart maxican--food">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course2.jpg" alt="">
-                        </div>
-                        <h1>Learn how to cook maxican food</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="7">ADD TO CART</a></h1>
-                        <!-- <button class="btn" data-id="7" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course2.jpg" alt="">
+                       <div class="info">
+                            <h1>Learn how to cook maxican food</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="7">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart build__music--studio">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course3.jpg" alt="">
-                        </div>
-                        <h1>Build a Music studio</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="8">ADD TO CART</a></h1>
-                        <!-- <button class="btn"data-id="8" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course3.jpg" alt="">
+                       <div class="info">
+                            <h1>Build a Music studio</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="8">ADD TO CART</button>
+                       </div>
                     </div>
-                    <div class="card-cart harvest">
-                        <div class="add__menu--cart">
-                            <img src="./src/img/course4.jpg" alt="">
-                        </div>
-                        <h1>Harvest your own fruits and Vegetables</h1>
-                        <p>Juan pedro</p>
-                        <span><img src="./src/img/stars.png" alt=""></span>
-                        <div class="add__cart--dorlla">
-                            <h2 id="dolla_1"><del>$200</del></h2>
-                            <h3 id="dolla_2"><span>$15</span></h3>
-                        </div>
-                        <h1><a href="#" class="btn"data-id="9">ADD TO CART</a></h1>
-                        <!-- <button class="btn" data-id="4" type="submit">ADD TO CART</button> -->
+                    <div id="cards" class="card-cart">
+                        <img src="./src/img/course4.jpg" alt="">
+                       <div class="info">
+                            <h1>Harvest your own fruits and Vegetables</h1>
+                            <p>Juan pedro</p>
+                            <img class="star" src="./src/img/stars.png" alt="">
+                            <span><del>$200</del><span>$15</span></span>
+                            <button  class="btn" data-id="">ADD TO CART</button>
+                       </div>
                     </div>
                 </div>
             </div>

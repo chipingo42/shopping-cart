@@ -37,6 +37,82 @@
 
 
 
+@media screen and (max-width: 780px) {
+    #footer {
+       height: 400px;
+    }
+
+    .main__footer {
+       position: relative;
+       left: 40px;
+       margin-top: 60px;
+    }
+
+
+    .main__footer .primary__footer {
+       width: 400px;
+    }
+
+    .main__footer .secondary__footer {
+       position: relative;
+       left: -90px;
+    }
+    
+
+    .main__footer .secondary__footer p {
+        width: 400px;
+    }
+
+    
+
+
+
+    @media screen and (max-width: 500px) {
+        #footer {
+            height: 100%;
+          
+        }
+        .main__footer {
+            display: block;
+            position: relative;
+            left: 20px;
+        }
+        .main__footer .secondary__footer {
+            position: relative;
+            left: 3px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 

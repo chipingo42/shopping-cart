@@ -1,13 +1,17 @@
+#showcase {
+    background: indigo;
+    height: 500px;
+}
 
 /* showcase */
-.showcase-img {
-    background: url('../img/hero.jpg')no-repeat center center/cover;
-    height: 60vh;
+.showcase-img img{
+    height: 500px;
+    width: 100%;
 }
 
 .content-showcase {
-    position: absolute;
-    top: 140px;
+    position: relative;
+    top: -270px;
 }
 
 .content-showcase h1 {
@@ -18,6 +22,7 @@
     font-weight: lighter;
     padding-left: 7px;
 }
+
 
 .content-showcase p {
    color: #ffff;
@@ -31,13 +36,14 @@
 }
 
 
-/* btn */
-.btn {
+/* form */
+form {
     position: relative;
     top: 30px;
     left: 7px;
 }
-.btn input {
+
+form input {
     width: 390px;
     height: 35px;
     border: none;
@@ -47,23 +53,130 @@
     border-radius: 5px;
 }
 
-.btn input:focus {
+form input:focus {
     outline: none;
 }
 
-.btn input::placeholder {
+form input::placeholder {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-style: normal;
 }
 
-.btn button {
+form button {
     position: relative;
-    left: -44px;
-    top: 8px;
+    left: -42px;
+    top: 5px;
     background: none;
     border: none;
     cursor: pointer;
+    height: 33px;
     z-index: 22;
+    clip-path: circle();
 }
+
+form button:focus {
+    background: #9e9d9d;
+}
+
+form img {
+    position: relative;
+    left: 8px;
+    top: 3px;
+    background-position: center;
+}
+
+
+
+
+@media screen and (max-width: 780px) {
+   #showcase {
+       width: 900px;
+    }
+    .showcase-img img{
+        height: 500px;
+        width: 100%;
+    }
+    .content-showcase {
+       margin: 48px 40px;
+    }
+
+    .content-showcase h1 {
+        font-size: 40px;
+        font-weight: 400;
+
+    }
+
+    .content-showcase p {
+        font-size: 23px;
+    }
+
+    form input {
+        width: 470px;
+        height: 50px;
+        padding-left: 14px;
+        padding-top: 6px;
+    }
+
+    form input::placeholder {
+        font-size: 20px;
+    }
+
+
+   @media screen and (max-width: 500px) {
+        #showcase {
+            height: 500px;
+            width: 700px;
+        }
+
+        .content-showcase {
+            position: relative;
+            left: -30px;
+            
+        }
+
+        .content-showcase h1 {
+            font-size: 32px;
+        }
+        form input {
+            width: 340px;
+        }        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,5 @@
 @import url('./showcase.css');
+@import url('./shopping-menu.css');
 @import url('./skill.css');
 @import url('./online__courses.css');
 @import url('./footer.css');
@@ -14,7 +15,10 @@ body {
     font-weight: 500;
     font-style: normal;
     scroll-behavior: smooth;
-    background: #908e8e;
+    /* background: #908e8e; */
+    background: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .container {
@@ -30,123 +34,66 @@ body {
     z-index: 66;
 }
 
-.logo img {
-    position: relative;
-    top: 20px;
-    cursor: pointer;
-}
-
-
-/* submenu */
-span img {
-    position: relative;
-    left: 200px;
-    top: -14px;
-    cursor: pointer;
-}
-.shopping-submenu:hover .cart__content {
-    position: relative;
-    left: -210px;
-    display: block;
-    width: 520px;
-    overflow-y: scroll;
-    background: #ffff;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.10);
-    border-radius: 7px;
-    scroll-behavior: smooth;
-}
-
-.shopping-submenu:hover .cart__content .remove {
-    display: block;
-}
-
-
-
-
-.shopping-submenu {
-    position: relative;
-    left: 900px;
-    height: 50%;
-}
-
-.shopping-submenu .cart__content {
-    display: none;
-    position: relative;
-    left: -200px;
-    width: 520px;
-    height: 700px;
-    background: red;
-    overflow-y: scroll;
-}
-
-.shopping-submenu .cart__content ul {
+.navbar {
     display: flex;
-    list-style: none;
-    /* border-bottom: 2px solid #908e8e; */
-    /* margin: 20px 0px; */
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 
-.image {
-    margin-left: 35px;
-}
-
-.name {
+.shopping__logo {
     position: relative;
-    left: 50px;
-}
-
-.price {
-    position: relative;
-    left: 90px;
-}
-
-
-.shopping-submenu .cart__content ul li {
-    padding: 20px 30px;
-    border-bottom: 2px solid #908e8e;
+    top: 10px;
+    left: -78px;
 }
 
 
 
-/* btn */
-.button {
-    height: 40px;
-    display: inline-block;
-    cursor: pointer;
-    width: 450px;
-    border: 2px solid #908e8e;
-    position: relative;
-    bottom: -1250px;
-    left: 18px;
+
+@media screen and (max-width: 780px) {
+    #nav {
+        height: 100px;
+    }
+
+    .navbar {
+        margin: 0 20px;
+    }
+
+    .logo-img {
+        position: relative;
+        top: 30px;
+        margin-left: 30px;
+        width: 220px;
+        height: 50px;
+    }
+
+    .shopping__logo {
+        position: relative;
+        left: -20px;
+        top: 34px;
+    }
+
+
+    @media screen and (max-width: 500px) {
+        #nav {
+            height: 90px;
+            width: 100%;
+        }
+
+        .navbar {
+            margin: 0 10px;
+        }
+
+        .logo-img {
+            margin-left: 10px;
+        }
+
+        .shopping__logo {
+            position: relative;
+            left: -10px;
+        }
+    }
 }
-
-.button a {
-    text-decoration: none;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-    font-style: oblique;
-    position: relative;
-    top: 7px;
-    left: 170px;
-    font-size: 20px;
-}
-
-.remove {
-    position: relative;
-    top: -30px;
-    left: -20px;
-    background: red;
-    clip-path: circle();
-    padding: 10px;
-    color: #ffff;
-    display: none;
-}
-
-
-
 
 
 

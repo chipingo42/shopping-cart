@@ -1,26 +1,61 @@
-// Variables
+// // Variables
 var courses = document.querySelector('#online__courses'),
-    shoppingCartContent = document.querySelector('#pull-up-id'),
+    shoppingCartContent = document.querySelector('#shoppingCartResult'),
     clearCartBtn = document.querySelector('#clear-btn');
+    shoppingImg = document.querySelector('.shopping__logo')
+    shoppingPullUp = document.querySelector('.menubox')
+    submitBtn = document.querySelector('#btn')
+;
 
 
-// Listeners
+
+// // Listeners
 loadEventListener();
 
+
+
+
 function loadEventListener() {
+    // btn.addEventListener('click', submit)
+    //  when to Open The Shopping Menu By Clicking The Image
+    shoppingImg.addEventListener('click', openMenu);
+
+
+    // By closing the ShoppingCart Menu
+    shoppingPullUp.addEventListener('click', closeMenu);
+
+
     // when a new course is added
     courses.addEventListener('click', buyCourse);
 
-    // when the remove button is clicked
-    shoppingCartContent.addEventListener('click', removerCourse);
+    // // when the remove button is clicked
+    // shoppingCartContent.addEventListener('click', removerCourse);
 
-    // clear cart Btn
+    // // clear cart Btn
     clearCartBtn.addEventListener('click', clearcart)
 }
 
 
+function handle(e) {
+    e.preventDefault()
+    console.log(submitBtn.value)
+}
 
-// Functions 
+
+function openMenu() {
+    shoppingPullUp.style.display = 'block'
+}
+
+
+function closeMenu() {
+    shoppingPullUp.style.display = 'none'
+
+    shoppingImg.style.display = 'block'
+}
+
+
+
+// // Functions 
 function buyCourse(e) {
     e.preventDefault();
     // console.log(e.target)
@@ -38,54 +73,55 @@ function buyCourse(e) {
 }
 
 
-// read the HTML information of the selected course
+// // read the HTML information of the selected course
 function getCoureInfo(course) {
     // create an object with course data
     var courseInfo = {
-        Image: course.querySelector('.add__menu--cart img').src,
+        Image: course.querySelector('img').src,
         title: course.querySelector('h1').textContent,
-        price: course.querySelector('.add__cart--dorlla span').textContent,
-        id: course.querySelector('h1 a').getAttribute('data-id')
+        // example: courses.querySelector('p').textContent,
+        price: course.querySelector('span span').textContent,
+        id: course.querySelector('.btn').getAttribute('data-id')
     }
     // Insert into the shooping cart
     addIntoCart(courseInfo);
+    // console.log(courseInfo)
 }
 
 
-// Display the selected course into the shoopin cart
-function addIntoCart(course ) {
+// // Display the selected course into the shopping cart
+function addIntoCart(course) {
     //    create a <ul>
-    var row = document.createElement('cart__content');
+    var row = document.createElement('centerBlock');
 
     // Build the template
     row.innerHTML = `
-      <ul>
+        <ul>
            <li>
-                <img src="${course.Image}" width=130>
+                <img src="${course.Image}" width=120>
            </li>
            <li>${course.title}</li>
            <li>${course.price}</li>
            <li>
                 <a href="#" class="remove" data-id="${course.id}">X</a>
            </li>
-      </ul>
-
+        </ul>
     `;
     // Add into the shopping cart
     shoppingCartContent.appendChild(row);
     console.log('added')
 }
 
-// remove course from the DOM
-function removerCourse(e) {
+// // remove course from the DOM
+// function removerCourse(e) {
 
-    if(e.target.classList.contains('remove')) {
-        e.target.parentElement.parentElement.remove();
-    }
-}
+//     if(e.target.classList.contains('remove')) {
+//         e.target.parentElement.parentElement.remove();
+//     }
+// }
 
 
-// clear course btn 
+// // clear course btn 
 function clearcart() {
     // shoppingCartContent.innerHTML = '';
 
@@ -93,20 +129,6 @@ function clearcart() {
         shoppingCartContent.removeChild(shoppingCartContent.firstChild)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
