@@ -1,39 +1,58 @@
 // // Variables
 var courses = document.querySelector('#online__courses'),
     shoppingCartContent = document.querySelector('#shoppingCartResult'),
-    clearCartBtn = document.querySelector('#clear-btn');
-    shoppingImg = document.querySelector('.shopping__logo')
-    shoppingPullUp = document.querySelector('.menubox')
-    submitBtn = document.querySelector('#btn')
+    clearCartBtn = document.querySelector('#clear-btn'),
+    shoppingImg = document.querySelector('.shopping__logo'),
+    shoppingCloseImg = document.querySelector('.shopping__logo2'),
+    shoppingPullUp = document.querySelector('.menubox'),
+    submitBtn = document.querySelector('#submitBtn'),
+    countingNumber = document.querySelector('.counting-number')
 ;
 
+console.log(countingNumber)
 
-
-// // Listeners
+// Listeners
 loadEventListener();
 
 
-
-
 function loadEventListener() {
-    // btn.addEventListener('click', submit)
     //  when to Open The Shopping Menu By Clicking The Image
     shoppingImg.addEventListener('click', openMenu);
 
 
     // By closing the ShoppingCart Menu
-    shoppingPullUp.addEventListener('click', closeMenu);
+    shoppingCloseImg.addEventListener('click', closeMenu);
 
 
     // when a new course is added
     courses.addEventListener('click', buyCourse);
 
-    // // when the remove button is clicked
+    //  when the remove button is clicked
     // shoppingCartContent.addEventListener('click', removerCourse);
 
-    // // clear cart Btn
+    // clear cart Btn
     clearCartBtn.addEventListener('click', clearcart)
 }
+
+
+function openMenu() {
+    shoppingPullUp.style.display = 'block'
+
+    shoppingCloseImg.style.display = 'block'
+
+    shoppingImg.style.display = 'none'
+
+}
+
+
+function closeMenu() {
+    shoppingPullUp.style.display = 'none'
+
+    shoppingCloseImg.style.display = 'none'
+
+    shoppingImg.style.display = 'block'
+}
+
 
 
 function handle(e) {
@@ -42,26 +61,15 @@ function handle(e) {
 }
 
 
-function openMenu() {
-    shoppingPullUp.style.display = 'block'
-}
-
-
-function closeMenu() {
-    shoppingPullUp.style.display = 'none'
-
-    shoppingImg.style.display = 'block'
-}
-
-
-
-// // Functions 
+// Functions 
 function buyCourse(e) {
     e.preventDefault();
-    // console.log(e.target)
 
     // use delegaton to find course that was added
     if(e.target.classList.contains('btn')) {
+
+        // making the counting number to display first
+        countingNumber.style.display = 'block'
         // console.log('Added')
         
         // read the course value
@@ -73,7 +81,7 @@ function buyCourse(e) {
 }
 
 
-// // read the HTML information of the selected course
+//  read the HTML information of the selected course
 function getCoureInfo(course) {
     // create an object with course data
     var courseInfo = {
@@ -89,7 +97,7 @@ function getCoureInfo(course) {
 }
 
 
-// // Display the selected course into the shopping cart
+//  Display the selected course into the shopping cart
 function addIntoCart(course) {
     //    create a <ul>
     var row = document.createElement('centerBlock');
@@ -98,7 +106,7 @@ function addIntoCart(course) {
     row.innerHTML = `
         <ul>
            <li>
-                <img src="${course.Image}" width=120>
+                <img src="${course.Image}" width=100>
            </li>
            <li>${course.title}</li>
            <li>${course.price}</li>
@@ -112,7 +120,7 @@ function addIntoCart(course) {
     console.log('added')
 }
 
-// // remove course from the DOM
+//  remove course from the DOM
 // function removerCourse(e) {
 
 //     if(e.target.classList.contains('remove')) {
@@ -121,9 +129,12 @@ function addIntoCart(course) {
 // }
 
 
-// // clear course btn 
+//  clear course btn 
 function clearcart() {
     // shoppingCartContent.innerHTML = '';
+
+    // making the counting number to display none when you clear shopping cart itmes
+    countingNumber.style.display = 'none'
 
     while(shoppingCartContent.firstChild) {
         shoppingCartContent.removeChild(shoppingCartContent.firstChild)

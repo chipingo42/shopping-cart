@@ -45,8 +45,32 @@ body {
     position: relative;
     top: 10px;
     left: -78px;
+    cursor: pointer;
 }
 
+.shopping__logo2 {
+    position: relative;
+    top: 10px;
+    left: -78px;
+    display: none;
+    cursor: pointer;
+}
+
+/* counting number */
+.counting-number {
+    width: 27px;
+    height: 27px;
+    background: #df4b4b;
+    color: #ffff;
+    padding-left: 8px;
+    padding-top: 4px;
+    border-radius: 50%;
+    position: relative;
+    left: 400px;
+    z-index: 2;
+    top: -10px;
+    display: none;
+}
 
 
 
@@ -92,6 +116,13 @@ body {
             position: relative;
             left: -10px;
         }
+
+        .shopping__logo2 {
+            position: relative;
+            left: -10px;
+            top: 40px;
+        }
+        
     }
 }
 
