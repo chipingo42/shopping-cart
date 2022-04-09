@@ -9,7 +9,7 @@ var courses = document.querySelector('#online__courses'),
     countingNumber = document.querySelector('.counting-number')
 ;
 
-console.log(countingNumber)
+// console.log(countingNumber)
 
 // Listeners
 loadEventListener();
@@ -140,45 +140,3 @@ function clearcart() {
         shoppingCartContent.removeChild(shoppingCartContent.firstChild)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
