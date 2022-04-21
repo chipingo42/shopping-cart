@@ -9,7 +9,11 @@ var courses = document.querySelector('#online__courses'),
     countingNumber = document.querySelector('.counting-number')
 ;
 
-// console.log(countingNumber)
+// const baseUrl = 'https://fakestoreapi.com/products/1';
+
+
+
+
 
 // Listeners
 loadEventListener();
@@ -108,7 +112,7 @@ function addIntoCart(course) {
            <li>
                 <img src="${course.Image}" width=100>
            </li>
-           <li>${course.title}</li>
+           <li class="new__skill p">${course.title}</li>
            <li>${course.price}</li>
            <li>
                 <a href="#" class="remove" data-id="${course.id}">X</a>

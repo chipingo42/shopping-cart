@@ -1,9 +1,18 @@
 #skill {
     width: 100%;
     height: 19vh;
-    /* background: #a5084ab6; */
     background: linear-gradient(270deg, #ff0458, #a50849e8 );
 }
+
+
+/* .innerJs {
+    width: 100px;
+    color: red;
+    line-height: 1.2;
+    font-size: 15px;
+} */
+
+
 
 .container__skill {
     display: flex;
@@ -24,6 +33,7 @@
 .container__skill .new__skill h2 {
     position: relative;
     left: 80px;
+    width: 100%;
     top: -20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
